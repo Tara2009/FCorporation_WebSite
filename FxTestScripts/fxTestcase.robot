@@ -21,12 +21,12 @@ Verify name and Designation are in same tag
     Log                ${Designation}
    
    #Option 1
-    #Pass Execution If     (('${EName}'=='LACHLAN K. MURDOCH') and ('${Designation}'=='EXECUTIVE CHAIRAND CHIEF EXECUTIVE OFFICER'))    Two are in the Same Tag
-    #Fail              Fail because not in the same tag
+    Pass Execution If     (('${EName}'=='LACHLAN K. MURDOCH') and ('${Designation}'=='EXECUTIVE CHAIRAND CHIEF EXECUTIVE OFFICER'))    Two are in the Same Tag
+    Fail              Fail because not in the same tag
 
    #Option 1
-    Run Keyword If     (('${EName}'=='LACHLAN K. MURDOCH') and ('${Designation}'=='EXECUTIVE CHAIRAND CHIEF EXECUTIVE OFFICER'))    Test Keyword1
-    ...                ELSE                        Test Keyword2
+    #Run Keyword If     (('${EName}'=='LACHLAN K. MURDOCH') and ('${Designation}'=='EXECUTIVE CHAIRAND CHIEF EXECUTIVE OFFICER'))    Test Keyword1
+    #...                ELSE                        Test Keyword2
 
 *** Keywords ***
 Test Keyword1
