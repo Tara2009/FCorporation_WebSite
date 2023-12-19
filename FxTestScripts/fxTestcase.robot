@@ -24,7 +24,7 @@ Verify name and Designation are in same tag
     #Fail              fail because not in same tag
     #Run Keyword If     (('${EName}'=='Lachlan K. Murdoch') and ('${EName}'=='Lachlan K. Murdoch'))    Test Keyword1
     #...                ELSE                        Test Keyword2
-    Run Keyword If     '${EName}'=='Lachlan K. Murdoch'    Test Keyword1
+    Run Keyword If     '${EName}'=='LACHLAN K. MURDOCH'    Test Keyword1
     ...                ELSE                        Test Keyword2
 
 *** Keywords ***
