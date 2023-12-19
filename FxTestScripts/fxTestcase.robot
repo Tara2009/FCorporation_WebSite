@@ -40,6 +40,6 @@ Test Keyword2
     Log                Executed - Two names are not in the same tag
 
 Returnmessage
-    ${a}=    Set Variable    12
+    ${a}=    Set Variable    8
     Return From Keyword If    ${a}>= 10     Hello
     Return From Keyword If    ${a}<10       Hi
