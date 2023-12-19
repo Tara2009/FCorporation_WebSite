@@ -30,7 +30,7 @@ Verify name and Designation are in same tag
 
 *** Keywords ***
 Test Keyword1
-    Log To Console     ${sametag}
+    Log To Console     '${sametag}''
     Log                Executed- Two are in the same tag
 
 Test Keyword2
