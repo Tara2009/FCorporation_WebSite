@@ -8,7 +8,7 @@ Suite Setup            Setup Browser
 Suite Teardown         End suite
 
 *** Variables ***
-${sametag}             Two are in the same Tag
+${sametag}=             Two are in the same Tag
 
 *** Test Cases ***
 Verify name and Designation are in same tag
@@ -20,10 +20,13 @@ Verify name and Designation are in same tag
     ${Designation}=    GetText                     //div[@class\='management-item__meta-wrapper']//h3[@class\='management-item__job-title']
     Log                ${Designation}
    
-    Pass Execution If     (('${EName}'=='LACHLAN K. MURDOCH') and ('${Designation}'=='EXECUTIVE CHAIRAND CHIEF EXECUTIVE OFFICER'))    Two are in the Same Tag
-    Fail              Fail because not in the same tag
-    #Run Keyword If     (('${EName}'=='LACHLAN K. MURDOCH') and ('${Designation}'=='EXECUTIVE CHAIRAND CHIEF EXECUTIVE OFFICER'))    Test Keyword1
-    #...                ELSE                        Test Keyword2
+   #Option 1
+    #Pass Execution If     (('${EName}'=='LACHLAN K. MURDOCH') and ('${Designation}'=='EXECUTIVE CHAIRAND CHIEF EXECUTIVE OFFICER'))    Two are in the Same Tag
+    #Fail              Fail because not in the same tag
+
+   #Option 1
+    Run Keyword If     (('${EName}'=='LACHLAN K. MURDOCH') and ('${Designation}'=='EXECUTIVE CHAIRAND CHIEF EXECUTIVE OFFICER'))    Test Keyword1
+    ...                ELSE                        Test Keyword2
 
 *** Keywords ***
 Test Keyword1
