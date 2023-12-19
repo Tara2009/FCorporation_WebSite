@@ -27,6 +27,8 @@ Verify name and Designation are in same tag
    #Option 1
     #Run Keyword If     (('${EName}'=='LACHLAN K. MURDOCH') and ('${Designation}'=='EXECUTIVE CHAIRAND CHIEF EXECUTIVE OFFICER'))    Test Keyword1
     #...                ELSE                        Test Keyword2
+Return message practice
+    ${b}=    Returnmessage    
 
 *** Keywords ***
 Test Keyword1
@@ -36,3 +38,8 @@ Test Keyword1
 Test Keyword2
     Log To Console     Fail two names are not in the same tag
     Log                Executed - Two names are not in the same tag
+
+Returnmessage
+    ${a}=    Set Variable    12
+    Return From Keyword If    ${a}>= 12     Hello
+    Return From Keyword If    ${a}<10       Hi
