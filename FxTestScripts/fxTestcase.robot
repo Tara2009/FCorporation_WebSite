@@ -12,7 +12,7 @@ ${sametag}             Two are in the same Tag
 
 *** Test Cases ***
 Verify name and Designation are in same tag
-    [Tags]             NameDis
+    [Tags]             NameDisignation
     [Documentation]    Verify the name and Designation are in the same tag
     Appstate           Home
     ${EName}=          GetText                     //div[@class\='management-item__meta-wrapper']//a[text()\='Lachlan K. Murdoch']
@@ -20,7 +20,7 @@ Verify name and Designation are in same tag
     ${Designation}=    GetText                     //div[@class\='management-item__meta-wrapper']//h3[@class\='management-item__job-title']
     Log                ${Designation}
    
-    Pass Execution If     (('${EName}'=='LACHLAN K. MURDOCH') and ('${Designation}'=='EXECUTIVES CHAIR AND CHIEF EXECUTIVE OFFICER'))    Two are in Same Tag
+    Pass Execution If     (('${EName}'=='LACHLAN K. MURDOCH') and ('${Designation}'=='EXECUTIVE CHAIR AND CHIEF EXECUTIVE OFFICER'))    Two are in Same Tag
     Fail              Fail because not in same tag
     #Run Keyword If     (('${EName}'=='LACHLAN K. MURDOCH') and ('${Designation}'=='EXECUTIVE CHAIRAND CHIEF EXECUTIVE OFFICER'))    Test Keyword1
     #...                ELSE                        Test Keyword2
