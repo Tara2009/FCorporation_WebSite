@@ -20,8 +20,8 @@ Verify name and Designation are in same tag
     ${Designation}=    GetText                     //div[@class\='management-item__meta-wrapper']//h3[@class\='management-item__job-title']
     Log                ${Designation}
    
-    Pass Execution If     (('${EName}'=='LACHLAN K. MURDOCH') and ('${Designation}'=='EXECUTIVE CHAIRAND CHIEF EXECUTIVE OFFICER'))    Two are in Same Tag
-    Fail              Fail because not in same tag
+    Pass Execution If     (('${EName}'=='LACHLAN K. MURDOCH') and ('${Designation}'=='EXECUTIVE CHAIRAND CHIEF EXECUTIVE OFFICER'))    Two are in the Same Tag
+    Fail              Fail because not in the same tag
     #Run Keyword If     (('${EName}'=='LACHLAN K. MURDOCH') and ('${Designation}'=='EXECUTIVE CHAIRAND CHIEF EXECUTIVE OFFICER'))    Test Keyword1
     #...                ELSE                        Test Keyword2
 
