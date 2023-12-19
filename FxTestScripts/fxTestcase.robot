@@ -22,7 +22,9 @@ Verify name and Designation are in same tag
     ${Setname}=        Set Variable                ${EName}
     #Pass Execution If                             '${EName}'=='Lachlan K. Murdoch'                        and '${Designation}'=='EXECUTIVE CHAIR AND CHIEF EXECUTIVE OFFICER'    Two are in Same Tag
     #Fail              fail because not in same tag
-    Run Keyword If     (('${EName}'=='Lachlan K. Murdoch') and ('${EName}'=='Lachlan K. Murdoch'))    Test Keyword1
+    #Run Keyword If     (('${EName}'=='Lachlan K. Murdoch') and ('${EName}'=='Lachlan K. Murdoch'))    Test Keyword1
+    #...                ELSE                        Test Keyword2
+    Run Keyword If     '${EName}'=='Lachlan K. Murdoch'    Test Keyword1
     ...                ELSE                        Test Keyword2
 
 *** Keywords ***
