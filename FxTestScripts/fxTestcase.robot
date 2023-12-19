@@ -18,5 +18,5 @@ Verify name and Designation are in same tag
     Log                  ${Designation}
     ${Setname}=          Set Variable                ${EName}
     #Pass Execution If                               '${EName}'=='Lachlan K. Murdoch'    and '${Designation}'=='EXECUTIVE CHAIR AND CHIEF EXECUTIVE OFFICER'    Two are in Same Tag
-    Pass Execution If    '${EName}'=='Lachlan K. Murdoch'                        Two are in Same Tag
+    Pass Execution If    '${Setname}'=='Lachlan K. Murdoch'                      Two are in Same Tag
     Fail                 fail because not in same tag
