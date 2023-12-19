@@ -41,5 +41,5 @@ Test Keyword2
 
 Returnmessage
     ${a}=    Set Variable    12
-    Return From Keyword If    ${a}>= 12     Hello
+    Return From Keyword If    ${a}>= 10     Hello
     Return From Keyword If    ${a}<10       Hi
